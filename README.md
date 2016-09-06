@@ -13,7 +13,7 @@ $ exit
 $ vagrant package --output ~/Documents/maitai2.box
 ```
 
-Ref: Making smaller base boxes
+:point_right: Ref: Making smaller base boxes
 https://github.com/mitchellh/vagrant/issues/343
 
 ### Add custom box 
