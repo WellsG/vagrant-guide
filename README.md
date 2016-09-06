@@ -1,13 +1,29 @@
-# vagrant-guide
+# vagrant-guide (maitai2)
 
-### how to package custom box
+### Vagrant box
+
+https://atlas.hashicorp.com/boxes/search?utm_source=vagrantcloud.com&vagrantcloud=1
+
+### How to package custom box
 ```
-vagrant up
-vagrant ssh
-cat /dev/zero > zero.fill;sync;sleep 1;sync;rm -f zero.fill
-exit
-vagrant package --output ~/Documents/maitai2.box
+$ vagrant up
+$ vagrant ssh
+$ cat /dev/zero > zero.fill;sync;sleep 1;sync;rm -f zero.fill
+$ exit
+$ vagrant package --output ~/Documents/maitai2.box
 ```
 
 Ref: Making smaller base boxes
 https://github.com/mitchellh/vagrant/issues/343
+
+### Add custom box 
+```
+$ vagrant box add ~/Documents/maitai2.box --name maitai2
+```
+
+### Init 
+```
+$ vagrant init maitai2
+$ vagrant up --provider virtualbox
+$ vagrant ssh
+```
