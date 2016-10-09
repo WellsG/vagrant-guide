@@ -27,3 +27,11 @@ $ vagrant init maitai2
 $ vagrant up --provider virtualbox
 $ vagrant ssh
 ```
+### Note:  If you want to support synced folder, please install the following extra plugin:
+```
+config.vm.synced_folder "/home/wguo/vagrant/workspace", "/home/wguo/vagarant_data", owner: "wguo", group:"wguo", create:true
+```
+```
+[~/vagrant] $ vagrant plugin install vagrant-vbguest
+```
+
